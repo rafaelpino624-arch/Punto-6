@@ -15,6 +15,20 @@ public class Operaciones {
      */
     public static double calcularPromedio(int[] numeros) {
 
+        // Verifico que no esté vacío
+        if (numeros == null || numeros.length == 0) {
+            return 0;
+        }
+
+        int sumaTotal = 0;
+
+        // Recorro el arreglo
+        for (int numero : numeros) {
+            sumaTotal += numero;
+        }
+
+        return (double) sumaTotal / numeros.length;
+
         
     }
 }
